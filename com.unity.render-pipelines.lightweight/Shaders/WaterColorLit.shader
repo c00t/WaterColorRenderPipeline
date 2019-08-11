@@ -112,7 +112,8 @@ Shader "Lightweight Render Pipeline/Water Color Local"
         [HideInInspector] _DstBlend("__dst", Float) = 0.0
         [HideInInspector] _ZWrite("__zw", Float) = 1.0
         _Cull("Cull Mode(0:double,1:back,2:front)", Float) = 2.0
-
+        
+        //in fact, Int also be treated as float
         [ToogleOff] _ReceiveShadows("Receive Shadows", Float) = 1.0
         [Toggle(_ALPHATEST_ON)] _ALPHATEST_ON("Alpha Test", Int) = 0
         [Toggle(_NORMALMAP)] _NORMALMAP("Use Normal Map", Int) = 0
