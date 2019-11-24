@@ -124,7 +124,7 @@ namespace UnityEngine.Experimental.Rendering.LWRP
             //    descriptor.dimension);
 
             cmd.SetViewProjectionMatrices(Matrix4x4.identity, Matrix4x4.identity);
-            cmd.SetViewport(renderingData.cameraData.camera.pixelRect);
+            cmd.SetViewport(new Rect(0f, 0f, renderingData.cameraData.camera.pixelRect.width * renderingData.cameraData.renderScale, renderingData.cameraData.camera.pixelRect.height * renderingData.cameraData.renderScale));
             //renderingData.cameraData.camera
             /*
             Matrix4x4 projMatrix = GL.GetGPUProjectionMatrix(camera.projectionMatrix, false);
